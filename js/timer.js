@@ -3,6 +3,7 @@ const reset = document.getElementById('reset');
 const break_time = document.getElementById('break');
 const display = document.getElementById('timer');
 const session_desc = document.getElementById('session');
+const session_end = document.getElementById('endsession');
 
 let countdown = -1;
 
@@ -32,6 +33,7 @@ function startTimer(duration) {
             document.title = display.textContent;
 
             if (diff <= 0) {
+                session_end.play()
                 if(session % 2 == 0)
                     breakTime();
                 else
