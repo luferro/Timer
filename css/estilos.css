@@ -54,13 +54,13 @@ i{
     text-shadow: 0 2px 20px #000;
 }
 
-i:hover{
+.row i:hover{
     transform: rotate(360deg);
     transition: all 1s;
     color: #000;
 }
 
-#break, #controls, #reset{
+#break, #controls, #reset, #toggle_mode{
     background: none;
 	color: inherit;
 	border: none;
@@ -89,4 +89,17 @@ i:hover{
     margin: 0 auto;
     font-size: 80px;
     color: #fff;
+}
+
+.dark{
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgb(255, 255, 255, 1) 20%, rgba(0,0,0,1) 20%);
+}
+
+.dark #timer{
+    color: #000;
+}
+
+.dark .sidebar ul li {
+    background: linear-gradient(124deg, rgb(255, 255, 255, 1) 0%, rgba(0,0,0,1) 70%);
 }
