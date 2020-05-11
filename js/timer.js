@@ -59,6 +59,7 @@ function resetTimer() {
     clearInterval(countdown);
     countdown = -1;
     session_desc.innerHTML = "Work time!";
+    session = 0;
     startTimer(time_default);
 }
 
@@ -81,8 +82,7 @@ session_custom.addEventListener("click", e => {
     if(break_custom.value != '')
         time_default_break = break_custom.value * 60;
     $(".close").click();
-    startTimer(time_default);
-    session++;
+    resetTimer();
 })
 
 button.addEventListener("click", e => {
