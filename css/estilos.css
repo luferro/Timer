@@ -5,6 +5,34 @@ html, body {
     background: radial-gradient(circle, rgba(238,174,202,1) 15%, rgba(148,233,225,1) 30%);
 }
 
+.custom-sessions{
+    max-width: 20%;
+    width: 10%;
+    position: absolute;
+}
+
+.input-group-text{
+    background: none;
+    border:none;
+    border-bottom: 2px solid #fff;
+    color: #fff !important;
+}
+
+#work_custom, #break_custom{
+    background: none;
+    border:none;
+    border-bottom: 2px solid #fff;
+    color:#fff !important;
+}
+
+#customize_times{
+    color: #fff !important;
+}
+
+.close{
+    color:#fff !important;
+}
+
 .sidebar {
 	position: fixed;
 	top: 45%;
@@ -60,7 +88,7 @@ i{
     color: #000;
 }
 
-#break, #controls, #reset, #toggle_mode{
+#customize, #controls, #reset, #toggle_mode{
     background: none;
 	color: inherit;
 	border: none;

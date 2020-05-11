@@ -1,17 +1,23 @@
 const button = document.getElementById('controls');
 const reset = document.getElementById('reset');
-const break_time = document.getElementById('break');
 const display = document.getElementById('timer');
 const session_desc = document.getElementById('session');
 const session_end = document.getElementById('endsession');
+const work_custom = document.getElementById('work_custom');
+const break_custom = document.getElementById('break_custom');
+const session_custom = document.getElementById('session_custom');
 
 let countdown = -1;
 
 var time_default = 60 * 25;
+var time_default_break; 60 * 5;
 var time_left = time_default;
 var session = 0;
 
+console.log(time_default)
+
 function startTimer(duration) {
+    console.log(time_default)
     if(countdown == -1) {
         clearInterval(countdown);        
         var start = Date.now();
@@ -61,17 +67,22 @@ function breakTime() {
     countdown = -1;
     session_desc.innerHTML = "Break time!";
     session++;
-    startTimer(60*5);
+    startTimer(time_default_break);
 }
-
-break_time.addEventListener("click", e => {
-    e.preventDefault();
-    breakTime();
-})
 
 reset.addEventListener("click", e => {
     e.preventDefault();
     resetTimer();
+})
+
+session_custom.addEventListener("click", e => {
+    if(work_custom.value != '')
+        time_default = work_custom.value * 60;
+    if(break_custom.value != '')
+        time_default_break = break_custom.value * 60;
+    $(".close").click();
+    startTimer(time_default);
+    session++;
 })
 
 button.addEventListener("click", e => {
