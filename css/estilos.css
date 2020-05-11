@@ -107,7 +107,7 @@ i{
     display: flex;
     justify-content: center;
     align-items: center;
-    height:10%;
+    height:5%;
     margin: 0 auto;
     font-size: 30px;
     color: #fff;
@@ -135,4 +135,11 @@ i{
 
 .dark .sidebar ul li {
     background: linear-gradient(124deg, var(--dark-primary-color) 0%, rgba(0,0,0,1) 70%);
+}
+
+@media only screen and (max-width: 600px) {
+    #timer{
+        font-size: 50px;
+        height:75%;
+    }
 }
