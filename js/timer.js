@@ -78,9 +78,3 @@ button.addEventListener("click", e => {
     e.preventDefault();
     startTimer(time_left);
 })
-
-button.addEventListener("keyup", e => {
-    if(e.keyCode == 32){
-        startTimer(time_left);
-    }
-})
