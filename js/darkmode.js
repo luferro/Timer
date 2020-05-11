@@ -4,18 +4,11 @@ const toggle = document.getElementById('toggle');
 const color_primary = document.getElementById('primary');
 const color_secondary = document.getElementById('secondary');
 
-color_primary.addEventListener('change', function(){
-    body.style.setProperty('--light-primary-color', color_primary.value);
-})
-
-color_secondary.addEventListener('change', function(){
-    body.style.setProperty('--light-secondary-color', color_secondary.value);  
-})
-
 var active = false;
 
 window.onload = function(){
     var active_status = localStorage.getItem("theme_status");
+    console.log(active_status);
     if(active_status == "dark") {
         body.classList.add("dark");
         active = true;
@@ -23,13 +16,13 @@ window.onload = function(){
         toggle.classList.add("fa-sun-o");
     }
     else 
-        if(localStorage.getItem("theme_status") == "light") 
+        if(localStorage.getItem("theme_status") == "light") {
             body.classList.remove("dark");
+        }
 }
 
 toggle_mode.addEventListener("click", e => {
     e.preventDefault();
-
     if(active) {
         localStorage.setItem("theme_status", "light");
         body.classList.remove("dark");
@@ -44,4 +37,16 @@ toggle_mode.addEventListener("click", e => {
         toggle.classList.remove("fa-moon-o");
         toggle.classList.add("fa-sun-o");
     }
+})
+
+color_primary.addEventListener('change', function(){
+    if(body.classList.contains('dark'))
+        body.style.setProperty('--dark-primary-color', color_primary.value);
+    else body.style.setProperty('--light-primary-color', color_primary.value);
+})
+
+color_secondary.addEventListener('change', function(){
+    if(body.classList.contains('dark'))
+        body.style.setProperty('--dark-secondary-color', color_secondary.value); 
+    else body.style.setProperty('--light-secondary-color', color_secondary.value);   
 })
