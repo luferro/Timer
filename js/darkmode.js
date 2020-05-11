@@ -1,6 +1,16 @@
 const body = document.body;
 const toggle_mode = document.getElementById('toggle_mode');
 const toggle = document.getElementById('toggle');
+const color_primary = document.getElementById('primary');
+const color_secondary = document.getElementById('secondary');
+
+color_primary.addEventListener('change', function(){
+    body.style.setProperty('--light-primary-color', color_primary.value);
+})
+
+color_secondary.addEventListener('change', function(){
+    body.style.setProperty('--light-secondary-color', color_secondary.value);  
+})
 
 var active = false;
 
