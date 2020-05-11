@@ -81,7 +81,9 @@ button.addEventListener("click", e => {
 
 button.addEventListener("keyup", e => {
     e.preventDefault();
-    if(e.keyCode == 32){
+
+    const keyName = event.key;
+    if(keyName == 'Space'){
         startTimer(time_left);
     }
-})
+}, false)
