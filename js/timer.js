@@ -63,7 +63,6 @@ function breakTime() {
     clearInterval(countdown);
     countdown = -1;
     session_desc.innerHTML = "Break time!";
-    session++;
     startTimer(time_default_break);
 }
 
@@ -73,10 +72,12 @@ reset.addEventListener("click", e => {
 })
 
 session_custom.addEventListener("click", e => {
-    if(work_custom.value != '')
+    if(work_custom.value)
         time_default = work_custom.value * 60;
-    if(break_custom.value != '')
+    else time_default = 25 * 60;
+    if(break_custom.value)
         time_default_break = break_custom.value * 60;
+    else time_default_break = 5 * 60;
     $(".close").click();
     session = 0;
     resetTimer();
