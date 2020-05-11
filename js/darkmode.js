@@ -15,10 +15,11 @@ window.onload = function(){
     else 
         if(localStorage.getItem("theme_status") == "light") 
             body.classList.remove("dark");
-  }
+}
 
 toggle_mode.addEventListener("click", e => {
     e.preventDefault();
+
     if(active) {
         localStorage.setItem("theme_status", "light");
         body.classList.remove("dark");

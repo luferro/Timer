@@ -7,7 +7,7 @@ const session_end = document.getElementById('endsession');
 
 let countdown = -1;
 
-var time_default = 60 * 1;
+var time_default = 60 * 25;
 var time_left = time_default;
 var session = 0;
 
@@ -61,7 +61,7 @@ function breakTime() {
     countdown = -1;
     session_desc.innerHTML = "Break time!";
     session++;
-    startTimer(60*0.5);
+    startTimer(60*5);
 }
 
 break_time.addEventListener("click", e => {
