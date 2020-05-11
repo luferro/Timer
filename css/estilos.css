@@ -93,7 +93,7 @@ i{
     color: #000;
 }
 
-#customize, #controls, #reset, #toggle_mode{
+#customize, #controls, #reset, #toggle_mode, #reset-theme{
     background: none;
 	color: inherit;
 	border: none;
