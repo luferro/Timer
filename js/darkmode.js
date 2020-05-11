@@ -9,10 +9,13 @@ var active = false;
 
 reset_button.addEventListener('click', e => {
     body.style.setProperty('--dark-primary-color', "rgb(255, 255, 255, 1)");
+    localStorage.setItem("color_secondary_dark", "rgb(255, 255, 255, 1)");
     body.style.setProperty('--dark-secondary-color', "rgb(0, 0, 0, 1)"); 
-
+    localStorage.setItem("color_secondary_dark", "rgb(0, 0, 0, 1)");
     body.style.setProperty('--light-primary-color', "rgba(238,174,202,1)");
+    localStorage.setItem("color_secondary_dark", "rgba(238,174,202,1)");
     body.style.setProperty('--light-secondary-color', "rgba(148,233,225,1)"); 
+    localStorage.setItem("color_secondary_dark", "rgba(148,233,225,1)");
 })
 
 window.onload = function(){
