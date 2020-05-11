@@ -14,10 +14,7 @@ var time_default_break; 60 * 5;
 var time_left = time_default;
 var session = 0;
 
-console.log(time_default)
-
 function startTimer(duration) {
-    console.log(time_default)
     if(countdown == -1) {
         clearInterval(countdown);        
         var start = Date.now();
@@ -40,7 +37,7 @@ function startTimer(duration) {
 
             if (diff <= 0) {
                 session_end.play()
-                if(session % 2 == 0)
+                if(session % 2 == 0) 
                     breakTime();
                 else
                     resetTimer();
@@ -59,7 +56,6 @@ function resetTimer() {
     clearInterval(countdown);
     countdown = -1;
     session_desc.innerHTML = "Work time!";
-    session = 0;
     startTimer(time_default);
 }
 
@@ -82,6 +78,7 @@ session_custom.addEventListener("click", e => {
     if(break_custom.value != '')
         time_default_break = break_custom.value * 60;
     $(".close").click();
+    session = 0;
     resetTimer();
 })
 
