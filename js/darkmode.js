@@ -20,7 +20,7 @@ reset_button.addEventListener('click', e => {
 
 window.onload = function(){
     var active_status = localStorage.getItem("theme_status");
-    console.log(active_status);
+  
     if(active_status == "dark") {
         body.classList.add("dark");
         active = true;
