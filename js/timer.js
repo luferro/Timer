@@ -19,7 +19,10 @@ if(localStorage.getItem("work_session_custom")) {
     if(storage_work_session < 10) storage_work_session = "0" + storage_work_session;
     display.innerHTML = storage_work_session + ":" + "00";
 }
-else time_default = 60 * 25;
+else {
+    time_default = 60 * 25;
+    display.innerHTML = "25:00";
+} 
 
 var time_default_break;
 if(localStorage.getItem("break_session_custom")) time_default_break = localStorage.getItem("break_session_custom") * 60;
@@ -28,9 +31,6 @@ else time_default_break = 60 * 5;
 var time_default_quickbreak = 60 * 2;
 var time_left = time_default;
 var session = 0;
-
-
-console.log(localStorage.getItem("work_session_custom") * 60)
 
 function startTimer(duration) {
     if(countdown == -1) {
