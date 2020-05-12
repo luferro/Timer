@@ -10,6 +10,7 @@ html, body {
     overflow-x:hidden;
     background: rgb(238,174,202);
     background: radial-gradient(circle, var(--light-primary-color) 15%, var(--light-secondary-color) 30%);
+    padding: 0 !important;
 }
 
 #color-pick{
@@ -19,13 +20,15 @@ html, body {
 .input-group-text{
     background: none;
     border:none;
+    border-radius: 0px;
     border-bottom: 2px solid #fff;
     color: #fff !important;
 }
 
-#work_custom, #break_custom{
+#work_custom, #break_custom, #quickbreak_custom{
     background: none;
     border:none;
+    border-radius: 0px;
     border-bottom: 2px solid #fff;
     color:#fff !important;
 }
@@ -36,6 +39,10 @@ html, body {
 
 .close{
     color:#fff !important;
+}
+
+.modal-footer{
+    justify-content: space-between;
 }
 
 .sidebar {
@@ -87,13 +94,17 @@ i{
     text-shadow: 0 2px 20px #000;
 }
 
+.row i{
+    font-size: 30px !important;
+}
+
 .row i:hover{
     transform: rotate(360deg);
     transition: all 1s;
-    color: #000;
+    text-shadow: 0 2px 20px #fff;
 }
 
-#customize, #controls, #reset, #toggle_mode, #reset-theme{
+#customize, #controls, #reset, #toggle_mode, #reset-theme, #quick_break{
     background: none;
 	color: inherit;
 	border: none;
@@ -109,7 +120,7 @@ i{
     align-items: center;
     height:5%;
     margin: 0 auto;
-    font-size: 30px;
+    font-size: 50px;
     color: #fff;
     text-shadow: 0 2px 20px #000;
 }
@@ -122,6 +133,7 @@ i{
     margin: 0 auto;
     font-size: 80px;
     color: #fff;
+    text-shadow: 0 2px 20px #000;
 }
 
 .dark{
@@ -137,9 +149,28 @@ i{
     background: linear-gradient(124deg, var(--dark-primary-color) 0%, rgba(0,0,0,1) 70%);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 374px) {
+    .sidebar{
+        top: 35%;
+    }
     #timer{
-        font-size: 50px;
-        height:75%;
+        font-size: 45px;
+        height:73%;
+    }
+    #session{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 374px) and (max-width: 415px) {
+    .sidebar{
+        top: 40%;
+    }
+    #timer{
+        font-size: 45px;
+        height:77%;
+    }
+    #session{
+        font-size: 30px;
     }
 }

@@ -23,7 +23,8 @@
     <div class="sidebar">
         <ul>
             <li><button id="toggle_mode" type="submit">Theme</button><i id="toggle" class="fa fa-moon-o" aria-hidden="true"></i></i></li>
-            <li><button id="customize" type="submit" data-toggle="modal" data-target="#customize_times">Customize</button><i class="fa fa-clock-o" aria-hidden="true"></i></li>
+            <li><button id="quick_break" type="submit">Quick break</button><i class="fa fa-clock-o" aria-hidden="true"></i></li>
+            <li><button id="customize" type="submit" data-toggle="modal" data-target="#customize_times">Customize</button><i class="fa fa-cog" aria-hidden="true"></i></li>
         </ul>
     </div>
 
@@ -31,30 +32,40 @@
         <div class="modal-dialog">
             <div class="modal-content bg-dark">
                 <div class="modal-header">
-                    <h4 class="modal-title">Customize your session length!</h4>
+                    <h4 class="modal-title">Settings</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
+                    <h4 class="text-center">Customize your work/break lengths!</h4>
+                    <br>
                     <label>Custom Work Session</label>
                     <div class="input-group">
-                        <input id="work_custom" type="number" class="form-control" placeholder="25">
+                        <input id="work_custom" type="number" class="form-control" placeholder="Default 25">
                         <div class="input-group-append">
                             <span class="input-group-text">Minutes</span>
                         </div>
                     </div>
                     <label>Custom Break Session</label>
                     <div class="input-group">
-                        <input id="break_custom" type="number" class="form-control" placeholder="5">
+                        <input id="break_custom" type="number" class="form-control" placeholder="Default 5">
                         <div class="input-group-append">
                             <span class="input-group-text">Minutes</span>
                         </div>
                     </div>
                     <br>
-                    <h6>To apply your chosen session lengths, click on the reset timer icon.</h6>
+                    <h4 class="text-center">Customize your quick break length!</h4>
+                    <br>
+                    <label>Custom Quick Break Session</label>
+                    <div class="input-group">
+                        <input id="quickbreak_custom" type="number" class="form-control" placeholder="Default 2">
+                        <div class="input-group-append">
+                            <span class="input-group-text">Minutes</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button id="session_custom" type="submit" class="btn btn-danger mt-2 ml-5">Customize</button>
-                    <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                    <button id="reset_sessions" type="submit" class="btn btn-danger">Reset lengths</button>
+                    <button id="session_custom" type="submit" class="btn btn-light">Customize</button>
                 </div>
             </div>
       
@@ -63,7 +74,7 @@
 
     <div id="session" class="mt-5">Work time!</div>
 
-    <div id="timer">25:00</div> 
+    <div id="timer"></div> 
    
     <div class="row">
         <button id="controls" type="submit" class="mr-2"><i class="fa fa-play" aria-hidden="true"></i></button>
