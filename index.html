@@ -15,8 +15,8 @@
 </head>
 <body> 
     <div id="color-pick" class="mt-2 ml-2">
-        <input id="primary" type="color">
-        <input id="secondary" type="color">
+        <input id="primary" type="color" aria-label='Primary color'>
+        <input id="secondary" type="color" aria-label='Secondary color'>
         <span id="reset-theme"><i class="fa fa-eraser" aria-hidden="true"></i></span>
     </div>
 
@@ -40,14 +40,14 @@
                     <br>
                     <label>Custom Work Session</label>
                     <div class="input-group">
-                        <input id="work_custom" type="number" class="form-control" placeholder="Default 25" min="0">
+                        <input id="work_custom" type="number" class="form-control" placeholder="Default 25" min="1">
                         <div class="input-group-append">
                             <span class="input-group-text">Minutes</span>
                         </div>
                     </div>
                     <label>Custom Break Session</label>
                     <div class="input-group">
-                        <input id="break_custom" type="number" class="form-control" placeholder="Default 5" min="0">
+                        <input id="break_custom" type="number" class="form-control" placeholder="Default 5" min="1">
                         <div class="input-group-append">
                             <span class="input-group-text">Minutes</span>
                         </div>
@@ -57,7 +57,7 @@
                     <br>
                     <label>Custom Quick Break Session</label>
                     <div class="input-group">
-                        <input id="quickbreak_custom" type="number" class="form-control" placeholder="Default 2" min="0">
+                        <input id="quickbreak_custom" type="number" class="form-control" placeholder="Default 2" min="1">
                         <div class="input-group-append">
                             <span class="input-group-text">Minutes</span>
                         </div>
