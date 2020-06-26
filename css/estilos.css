@@ -149,6 +149,25 @@ i{
     background: linear-gradient(124deg, var(--dark-primary-color) 0%, rgba(0,0,0,1) 70%);
 }
 
+.footer{ 
+	color: #fff;
+	width:100%;
+	text-align:center;
+	position: absolute;        
+	bottom: 1%; 
+	text-shadow: 0 2px 20px #000;
+}
+
+.footer a{ 
+	text-decoration: none;
+	color: var(--light-primary-color);
+}
+
+.dark .footer a{ 
+	text-decoration: none;
+	color: var(--dark-primary-color);
+}
+
 @media only screen and (max-width: 374px) {
     .sidebar{
         top: 35%;
